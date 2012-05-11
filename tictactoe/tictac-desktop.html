@@ -1,0 +1,142 @@
+<html manifest="tictac-desktop.appcache">
+<!--
+Copyright (c) 2012 SeRepo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+	<head>
+<link REL="SHORTCUT ICON" HREF="favicon.ico"/>
+		<script type="text/javascript">
+			// Original JavaScript code by Chirp Internet: www.chirp.com.au
+			// Please acknowledge use of this code by including this header.
+			var today = new Date();
+			var expiry = new Date(today.getTime() + 31536000000); // plus 365 days
+			var expired = new Date(today.getTime() - 24 * 3600 * 1000); // less 24 hours
+			function setCookie(name, value){
+				document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+			}
+			function storeValues(form){
+				setCookie("win", document.getElementById('win').value);
+				setCookie("lose", document.getElementById('lose').value);
+				return true;
+			}
+			function loadCookies(){
+				if(win = getCookie("win")) document.getElementById('win').value = win;
+				if(lose = getCookie("lose")) document.getElementById('lose').value = lose;
+			}
+			function deleteCookie(name){
+				document.cookie=name + "=null; path=/; expires=" + expired.toGMTString();
+			}
+			function getCookie(name){
+				var re = new RegExp(name + "=([^;]+)");
+				var value = re.exec(document.cookie);
+				return (value != null) ? unescape(value[1]) : null;
+			}
+			function onLoadStuff(){
+				loadCookies();
+				deleteCookie(win);
+				deleteCookie(lose);
+				storeValues(tic);
+				loadCookies();
+			}
+			function resetScoreStuff(){
+				resetScore();
+				deleteCookie(win);
+				deleteCookie(lose);
+				storeValues(tic);
+				loadCookies();
+			}
+			function saveScoreAuto(){
+				deleteCookie(win);
+				deleteCookie(lose);
+				storeValues(tic);
+			}
+if ("ontouchstart" in document.documentElement)
+{
+  window.location.href="http://test.serepo.site88.net/tictac-mobile.html"
+}
+		</script>
+		<script type="text/javascript" src="tictac.js"></script>
+	</head>
+	<body onLoad="onLoadStuff()" style="background-color:deepskyblue">
+		<FORM NAME="tic" align="center" style="-webkit-touch-callout: none; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: none; -webkit-user-select: none;">
+			<br/>
+			<br/>
+			<table border="0" cellpadding="0" align="center">
+				<tr>
+					<td>
+						<INPUT TYPE="button" style="font-size:11pt; -webkit-tap-highlight-color: rgba(0,0,0,0);border-radius: 0; -webkit-border-radius: 0; -webkit-appearance:none; background-color:white" NAME="sqr1" class="tictac" value="     " onClick="if(document.tic.sqr1.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr1.value = ' X '; sqr1T = 1; turn = 1; vari(); check();} else if(document.tic.sqr1.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr1.value = ' X '; sqr1T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr1.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr1.value = ' O '; sqr1T = 1; turn = 1; vari(); player1Check()} drawCheck()" />
+					</td>
+					<td>
+						<INPUT TYPE="button" style="font-size:11pt; -webkit-tap-highlight-color: rgba(0,0,0,0);border-radius: 0; -webkit-border-radius: 0; -webkit-appearance:none; background-color:white" NAME="sqr2" class="tictac" value="     " onClick="if(document.tic.sqr2.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr2.value = ' X '; sqr2T = 1; turn = 1; vari(); check();} else if(document.tic.sqr2.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr2.value = ' X '; sqr2T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr2.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr2.value = ' O '; sqr2T = 1; turn = 1; vari(); player1Check()} drawCheck()" />
+					</td>
+					<td>
+						<INPUT TYPE="button" style="font-size:11pt; -webkit-tap-highlight-color: rgba(0,0,0,0);border-radius: 0; -webkit-border-radius: 0; -webkit-appearance:none; background-color:white" NAME="sqr3" class="tictac" value="     " onClick="if(document.tic.sqr3.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr3.value = ' X '; sqr3T = 1; turn = 1; vari(); check();} else if(document.tic.sqr3.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr3.value = ' X '; sqr3T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr3.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr3.value = ' O '; sqr3T = 1; turn = 1; vari(); player1Check()} drawCheck()" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<INPUT TYPE="button" style="font-size:11pt; -webkit-tap-highlight-color: rgba(0,0,0,0);border-radius: 0; -webkit-border-radius: 0; -webkit-appearance:none; background-color:white" NAME="sqr4" class="tictac" value="     " onClick="if(document.tic.sqr4.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr4.value = ' X '; sqr4T = 1; turn = 1; vari(); check();} else if(document.tic.sqr4.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr4.value = ' X '; sqr4T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr4.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr4.value = ' O '; sqr4T = 1; turn = 1; vari(); player1Check()} drawCheck()" />
+					</td>
+					<td>
+						<INPUT TYPE="button" style="font-size:11pt; -webkit-tap-highlight-color: rgba(0,0,0,0);border-radius: 0; -webkit-border-radius: 0; -webkit-appearance:none; background-color:white" NAME="sqr5" class="tictac" value="     " onClick="if(document.tic.sqr5.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr5.value = ' X '; sqr5T = 1; turn = 1; vari(); check();} else if(document.tic.sqr5.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr5.value = ' X '; sqr5T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr5.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr5.value = ' O '; sqr5T = 1; turn = 1; vari(); player1Check()} drawCheck()" />
+					</td>
+					<td>
+						<INPUT TYPE="button" style="font-size:11pt; -webkit-tap-highlight-color: rgba(0,0,0,0);border-radius: 0; -webkit-border-radius: 0; -webkit-appearance:none; background-color:white" NAME="sqr6" class="tictac" value="     " onClick="if(document.tic.sqr6.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr6.value = ' X '; sqr6T = 1; turn = 1; vari(); check();} else if(document.tic.sqr6.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr6.value = ' X '; sqr6T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr6.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr6.value = ' O '; sqr6T = 1; turn = 1; vari(); player1Check()} drawCheck()" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<INPUT TYPE="button" style="font-size:11pt; -webkit-tap-highlight-color: rgba(0,0,0,0);border-radius: 0; -webkit-border-radius: 0; -webkit-appearance:none; background-color:white" NAME="sqr7" class="tictac" value="     " onClick="if(document.tic.sqr7.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr7.value = ' X '; sqr7T = 1; turn = 1; vari(); check();} else if(document.tic.sqr7.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr7.value = ' X '; sqr7T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr7.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr7.value = ' O '; sqr7T = 1; turn = 1; vari(); player1Check()} drawCheck()" />
+					</td>
+					<td>
+						<INPUT TYPE="button" style="font-size:11pt; -webkit-tap-highlight-color: rgba(0,0,0,0);border-radius: 0; -webkit-border-radius: 0; -webkit-appearance:none; background-color:white" NAME="sqr8" class="tictac" value="     " onClick="if(document.tic.sqr8.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr8.value = ' X '; sqr8T = 1; turn = 1; vari(); check();} else if(document.tic.sqr8.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr8.value = ' X '; sqr8T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr8.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr8.value = ' O '; sqr8T = 1; turn = 1; vari(); player1Check()} drawCheck()" />
+					</td>
+					<td>
+						<INPUT TYPE="button" style="font-size:11pt; -webkit-tap-highlight-color: rgba(0,0,0,0);border-radius: 0; -webkit-border-radius: 0; -webkit-appearance:none; background-color:white" NAME="sqr9" class="tictac" value="     " onClick="if(document.tic.sqr9.value == '     ' && turn == 0 && mode == 1) {document.tic.sqr9.value = ' X '; sqr9T = 1; turn = 1; vari(); check();} else if(document.tic.sqr9.value == '     ' && turn == 1 && mode == 2) {document.tic.sqr9.value = ' X '; sqr9T = 1; turn = 0; vari(); player1Check()} else if(document.tic.sqr9.value == '     ' && turn == 0 && mode == 2) {document.tic.sqr9.value = ' O '; sqr9T = 1; turn = 1; vari(); player1Check()} drawCheck()" />
+					</td>
+				</tr>
+			</table>
+			</br>
+            <table border="0" cellpadding="0" cellspacing="0" align="center"><!-- this table is for Internet Explorer (it sucks, doesn't read html properly) -->
+				<tr>
+					<td>
+						<input type="button" name="meh1" style="font-size:10pt; -webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-appearance:none; background-color:white" value="Reset" onClick="resetter()"/>
+					</td>
+				</tr>
+			</table>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<table border="2" cellspacing="0" cellpadding="2" align="center" style="background-color:white">
+				<tr>
+					<th colspan="4" align="center">Scores</th>
+				</tr>
+				<tr>
+					<td align="center">
+						<p>Won:</p>
+					</td>
+					<td>
+						<input type="text" onClick="" value="0" size="5" id="win" readonly="readonly" style="-webkit-appearance:none; -webkit-tap-highlight-color: rgba(0,0,0,0); border-style:none; -webkit-border-style:none"/>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<p>Lost:</p>
+					</td>
+					<td>
+						<input type="text" onClick="" value="0" size="5" id="lose" readonly="readonly" style="-webkit-appearance:none; -webkit-tap-highlight-color: rgba(0,0,0,0); border-style:none; -webkit-border-style:none"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center" name="meh2" style="padding:0px; height:25px"><input type="button" value="Reset Scores" onClick="resetScoreStuff()" style="width:100%; height:100%; -webkit-appearance:none; -webkit-tap-highlight-color: rgba(0,0,0,0); border-style:none; -webkit-border-style:none; border-radius: 0; -webkit-border-radius: 0; background-color:red; color:white"/></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>	

@@ -1,0 +1,21 @@
+<html manifest="speck.appcache">
+	<head>
+                <title>SpeckEdit</title>
+		<script type="text/javascript" src="speck.js"></script>
+		<link rel="stylesheet" type="text/css" href="editstyle.css"/>
+		<link rel="stylesheet" type="text/css" href="speck.css"/>
+	</head>
+	<body onload="speckInit()">
+		<textarea class="iEdit" id="input" cols="70" rows="15"></textarea>
+		<br/>
+		<input type="button" value="Show Output" onclick="showOutput()"/>
+		<br/>
+		<hr/>
+		<div id="output"></div>
+		<script type="text/javascript">
+			function showOutput(){
+				document.getElementById('output').innerHTML = iEdit["input"].html();
+			}
+		</script>
+	</body>
+</html>

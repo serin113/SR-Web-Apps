@@ -1,0 +1,150 @@
+.speckToolbar, .speckButton 
+{
+    background-image: url(./speck.gif);
+    background-repeat: repeat-x;
+    height: 32px;
+}
+.speckToolbar { background-position: 0 -64px; }
+
+.speckLinkbar 
+{
+    background-color: #eee;
+    height: 27px;
+    padding-top: 4px;
+    border-right: solid 1px #ccc;
+    border-left: solid 1px #ccc;    
+}
+.speckLinkbar input
+{
+    margin-left: 5px;
+}
+.speckBar
+{
+    background-color: #eee;
+    height: 31px;
+    line-height:31px;    
+    border-right: solid 1px #ccc;
+    border-left: solid 1px #ccc;
+}
+
+.speckFrame
+{
+    border-left: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    background-color:#fff;
+}
+.speckButton
+{   
+    border: solid 0px #000;
+	background-color: #ccccff;
+	width: 26px;
+}
+.speckButton:hover
+{
+   cursor: pointer;
+}
+#boldButton{background-position: 0px 0px;}
+#boldButton:hover{background-position: 0px -32px;}
+#italicButton{background-position: -24px 0px;}
+#italicButton:hover{background-position: -24px -32px;}
+#underlineButton{background-position: -48px 0px;}
+#underlineButton:hover{background-position: -48px -32px;}
+#linkButton{background-position: -294px 0px;}
+#linkButton:hover{background-position: -294px -32px;}
+#unlinkButton{background-position: -318px 0px;}
+#unlinkButton:hover{background-position: -318px -32px;}
+#justifyleftButton{background-position: -74px 0px;}
+#justifyleftButton:hover{background-position: -74px -32px;}
+#justifyrightButton{background-position: -124px 0px;}
+#justifyrightButton:hover{background-position: -124px -32px;}
+#justifycenterButton{background-position: -98px 0px;}
+#justifycenterButton:hover{background-position: -98px -32px;}
+#insertunorderedlistButton{background-position: -174px 0px;}
+#insertunorderedlistButton:hover{background-position: -174px -32px;}
+#insertorderedlistButton{background-position: -198px 0px;}
+#insertorderedlistButton:hover{background-position: -198px -32px;}
+#htmlButton{background-position: -342px 0px;width: 38px;}
+#htmlButton:hover{background-position: -342px -32px;width: 38px;}
+#addfileButton{background-position: -225px 0px;width: 70px;}
+#addfileButton:hover{background-position: -225px -32px;width: 70px;}
+#formatblockButton{background-position: -500px 0px;width: 30px;}
+#formatblockButton:hover{background-position: -500px -32px;width: 30px;}
+#fontnameButton{background-position: -379px 0px;width: 30px;}
+#fontnameButton:hover{background-position: -379px -32px;width: 30px;}
+#fontsizeButton{background-position: -405px 0px;width: 36px;}
+#fontsizeButton:hover{background-position: -405px -32px;width: 36px;}
+#forecolorButton{background-position: -440px 0px;width: 28px;}
+#forecolorButton:hover{background-position: -440px -32px;width: 28px;}
+#removeformatButton{background-position: -472px 0px;}
+#removeformatButton:hover{background-position: -472px -32px;}
+
+
+.linkbarButton
+{
+    border: solid 1px #ccc;
+	background-color: Transparent;
+	height: 22px;
+	width: 40px;    
+}
+.linkbarButton:hover 
+{
+    background-color: White;
+}
+.speckSelect, .speckColorSelect
+{
+    background-color: #fff;
+    border: solid 1px #ccc;
+    line-height: 19px;
+    font-family: Arial;
+    font-size: 12px;
+    padding: 4px 0 0 0;
+    margin: 0px 0 0 -4px;
+    z-index: 10;
+}
+.speckColorBar
+{
+    background-color: #eee;
+    height: 31px;
+    line-height:31px;    
+    border-right: solid 1px #ccc;
+    border-left: solid 1px #ccc;
+   
+}
+.speckColor
+{  
+    border: solid 1px #fff;
+    display:block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-top: 7px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+#formatblockSelect
+{
+}
+.speckToolbar input
+{
+     cursor: pointer;
+}
+
+.speckBar input
+{  
+    height: 31px;
+    padding: 0;
+    cursor: pointer;
+    color: #000;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    margin: 0;
+    
+}
+.speckBar input:hover
+{
+    color: #ff6600;
+}
