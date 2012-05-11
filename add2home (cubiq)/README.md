@@ -6,4 +6,4 @@ If you want to change the looks of the add2home alert, I recommend you to downlo
 ## add2home-webapp.js???????
 
 add2home-webapp.js is a modified version of add2home.js.
-Its purpose is to show a different message in webapps and a different message in SR Tests.
+Its purpose is to show a different message in webapps and a different message in SR Tests homepage.
