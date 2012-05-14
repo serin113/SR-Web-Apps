@@ -1,3 +1,7 @@
+## Download:
+
+You can easily download all these files at [serin113.github.com/SR-Web-Apps](http://serin113.github.com/SR-Web-Apps/)
+
 ## Credits:
 
 * add2home (used in most of my web apps) - [https://github.com/cubiq/add-to-homescreen](https://github.com/cubiq/add-to-homescreen)
