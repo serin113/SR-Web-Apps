@@ -1,6 +1,3 @@
-# SR API Docs
-
-
 ## SourceViewer
 
 SourceViewer lets you embed a page source on any website.
