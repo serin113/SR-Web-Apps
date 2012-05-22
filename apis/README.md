@@ -1,6 +1,7 @@
 # SR API Docs
 
-### SourceViewer
+
+## SourceViewer
 
 SourceViewer lets you embed a page source on any website.
 The SourceViewer API goes in this syntax: **http://test.serepo.site88.net/apis/sv.php?url="yoururlhere"**
