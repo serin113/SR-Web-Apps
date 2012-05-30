@@ -1,7 +1,19 @@
 <html>
+<head>
+<title>SV Demo</title>
+<script type="text/javascript">
+function APIURL(){
+var url = document.getElementById('url').value
+var api = 'http://test.serepo.site88.net/apis/sv.php?url='+url
+document.getElementById('iframe').src = api
+}
+</script>
+</head>
 <body style="text-align:center">
-<p>The textarea below is actually an iframe with the SourceViewer API.</p>
-<iframe src="http://test.serepo.site88.net/apis/sv.php?url=http://test.serepo.site88.net/apis/sourceviewerdemo.html" style="width:400px; height:300px; border:0px">
+<input type="text" value="http://" id="url"/><input type="button" value="View Source" onclick="APIURL()"/>
+<br/>
+<br/>
+<iframe src="" style="width:100%; height:70%" id="iframe">
 Your browser does not support iframes.
 </iframe>
 </body>
