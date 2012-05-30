@@ -11,7 +11,7 @@ Live demo [here](http://test.serepo.site88.net/apis/sourceviewerdemo.html).
 
 #### Bonus:
 You can use this to view any page source via a bookmarklet.
-Just copy the code below and add it as a bookmark:
+Just copy the code below and add it as a bookmark.
 ```javascript:window.location.href='http://test.serepo.site88.net/apis/sv.php?url='+window.location.href```
 Then while you're on another website, you can click the bookmark to instantly view the page source of the website.
 This works on any device that supports JavaScript bookmarklets (including iPhone).
