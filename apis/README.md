@@ -1,5 +1,3 @@
-# SR API Docs
-
 ## SourceViewer
 SourceViewer lets you preview the page source of any website.
 The SourceViewer API goes in this syntax: ```http://test.serepo.site88.net/apis/sv.php?url=yoururlhere```
