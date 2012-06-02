@@ -40,7 +40,7 @@ echo "$string";
 </textarea>
 </form>
 <script type="text/javascript">
-var editor = CodeMirror.fromTextArea(document.getElementById("meh"), {mode: "text/html", tabMode: "indent", lineNumbers: "true", readOnly: "nocursor"});
+var editor = CodeMirror.fromTextArea(document.getElementById("meh"), {mode: "text/html", tabMode: "indent", lineNumbers: "true", readOnly: "nocursor", lineWrapping: "true"});
 </script>
 <script type="text/javascript">
 if (window.top!=window.self){

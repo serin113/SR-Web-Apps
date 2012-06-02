@@ -1,35 +1,37 @@
 <html manifest="htmledit.appcache">
-<!--
-Copyright (c) 2012 SeRepo
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
--->
 <head>
 <title>HTMLEdit</title>
 <link rel="apple-touch-icon-precomposed" href="htmledit.jpg"/>
 <link rel="stylesheet" href="add2home.css"/>
 <script type="application/javascript" src="add2home-webapp.js"></script>
+<meta name="description" content="A lightweight HTML snippet tester."/>
+<meta name="keywords" content="serepo, repo, repository, random, open source, free, qrspace, html, css, javascript, project, js, open, source, jscript, comics, qr, projects, flash projects, flash, weebly, javascript tests, webpage, website, site88, ios, ios web apps, web apps, webapps, site88, seblog, wordpress, blog, git, github, github repo, safari, mobile safari, appcache, cache, htmledit, html editor, lightweight, html snippet, html snippets, html tester" />
 <meta name="viewport" content="width = device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <script type="text/javascript">
 function goin(){
-var val = document.getElementById('htmlArea').value
-document.getElementById('preview').innerHTML = val
+var val=document.getElementById('htmlArea').value
+document.getElementById('preview').innerHTML=val
 }
 function detailsFTWYay(){
-alert("HTMLEdit is meant to be a lightweight solution to test small snippets of HTML code.\n\nHTMLEdit is based on code in (http://www.javascriptsource.com\n/forms/html-preview.html).\n\nHTMLEdit does not support the <script> tag.\nIf you want to run scripts, you need to put them in an event (more info about this in http://www.w3schools.com/js/js_events.asp) inside the element.\n\nBonus: You can use function popup() to easily create popups.\nSyntax: popup(type, 'value')\nTypes: alert, confirm, prompt")
+alert("HTMLEdit is meant to be a lightweight solution to test small snippets of HTML code.\n\nHTMLEdit is based on code in (http://www.javascriptsource.com\n/forms/html-preview.html).\n\nIf you want to run scripts in your code, press 'Full Screen' to run scripts in a new window.\n\nBonus: You can use function popup() to easily create popups.\nSyntax: popup(type, 'value')\nTypes: alert, confirm, prompt")
 }
 function style(){
 var width=document.body.clientWidth-20
 document.getElementById('preview').style = "width:"+width+"px; word-wrap: break-word;"
 }
+function clearIt(){
+document.getElementById('htmlArea').value = ""
+document.getElementById('preview').innerHTML = ""
+}
 function popup(type, value){
 if(type==alert){alert(value)}
 else if(type==confirm){var i=confirm(value); return i}
 else if(type==prompt){var i=prompt(value); return i}
+}
+function newWindow(){
+var i = window.open();
+var val = document.getElementById('htmlArea').value;
+i.document.write(val);
 }
 </script>
 <style type="text/css">
@@ -37,10 +39,10 @@ span#preview *{margin:0px;}
 textarea#htmlArea{display:inline-block; margin-left:8px; margin-right:8px; width:100%}
 </style>
 </head>
-<body onload="setInterval(style(), 50)" style="margin:0px; padding:0px; -webkit-text-size-adjust: none">
+<body onload="setInterval(style(), 50); goin()" style="margin:0px; padding:0px; -webkit-text-size-adjust: none">
 <div style="background-color:white; -webkit-user-select: none; width:100%; border-style:none none ridge none; z-index:1000000">
-<form id="form" style="-webkit-user-select: none; background-color:deepskyblue; width:100%; text-align:center; margin:0px; border-style: none none ridge none;">
-<textarea name="htmlArea" id="htmlArea" rows="3" onChange="goin()" style="width:100%; box-sizing: border-box; margin-left:auto; margin-right:auto">
+<form id="form" style="-webkit-user-select: none; background-color:deepskyblue; width:100%; text-align:center; margin:0px;">
+<textarea name="htmlArea" id="htmlArea" onChange="goin()" rows="3" style="width:100%; box-sizing: border-box; margin-left:auto; margin-right:auto">
 <html>
 <head>
 <title>HTMLEdit</title>
@@ -48,12 +50,17 @@ textarea#htmlArea{display:inline-block; margin-left:8px; margin-right:8px; width
 <body>
 <p>A preview of your HTML code will appear here.</p>
 </body>
-</html>
-</textarea>
+</html></textarea>
 <table border="0" cellpadding="0" cellspacing="0" align="center">
 <tr>
 <td>
 <input type="button" value="Reset" onClick="window.location.reload();" style="-webkit-user-select: none;"/>
+</td>
+<td>
+<input type="button" value="Clear" onClick="clearIt()" style="-webkit-user-select: none;"/>
+</td>
+<td>
+<input type="button" value="Full Screen" onClick="newWindow()" style="-webkit-user-select: none;"/>
 </td>
 <td>
 <input type="button" value="Details" onClick="detailsFTWYay()" style="-webkit-user-select: none;"/>
@@ -61,17 +68,8 @@ textarea#htmlArea{display:inline-block; margin-left:8px; margin-right:8px; width
 </tr>
 </table>
 </form>
-<h3 style="margin-top:8px; margin-left:8px;">Preview:</h3>
 </div>
 <span id="preview" name="preview" style="word-wrap: break-word; margin-top:0px; margin-bottom:0px; -webkit-user-select: none; background-color: white;">
-<html>
-<head>
-<title>HTMLEdit</title>
-</head>
-<body>
-<p>A preview of your HTML code will appear here.</p>
-</body>
-</html>
 </span>
 </body>
 </html>
