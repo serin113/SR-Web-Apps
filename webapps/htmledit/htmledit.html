@@ -22,16 +22,15 @@ var val=document.getElementById('htmlArea').value
 document.getElementById('preview').innerHTML=val
 }
 function detailsFTWYay(){
-alert("HTMLEdit is meant to be a lightweight solution to test small snippets of HTML code.\n\nHTMLEdit is based on code in (http://www.javascriptsource.com\n/forms/html-preview.html).\n\nIf you want to run scripts in your code, press 'Full Screen' to run scripts in a new window.\n\nBonus: You can use function popup() to easily create popups.\nSyntax: popup(type, 'value')\nTypes: alert, confirm, prompt")
+alert("HTMLEdit is meant to be a lightweight solution to test small snippets of HTML code.\n\nHTMLEdit is based on code in (http://www.javascriptsource.com\n/forms/html-preview.html).\n\nIf you want to run scripts in your code, press 'Full Screen' to run scripts in a new window.")
 }
 function style(){
 var width=document.body.clientWidth-20
 document.getElementById('preview').style = "width:"+width+"px; word-wrap: break-word;"
 }
-function popup(type, value){
-if(type==alert){alert(value)}
-else if(type==confirm){var i=confirm(value); return i}
-else if(type==prompt){var i=prompt(value); return i}
+function clearIt(){
+document.getElementById('htmlArea').value = ""
+document.getElementById('preview').innerHTML = ""
 }
 function newWindow(){
 var i = window.open();
@@ -60,6 +59,9 @@ textarea#htmlArea{display:inline-block; margin-left:8px; margin-right:8px; width
 <tr>
 <td>
 <input type="button" value="Reset" onClick="window.location.reload();" style="-webkit-user-select: none;"/>
+</td>
+<td>
+<input type="button" value="Clear" onClick="clearIt()" style="-webkit-user-select: none;"/>
 </td>
 <td>
 <input type="button" value="Full Screen" onClick="newWindow()" style="-webkit-user-select: none;"/>
