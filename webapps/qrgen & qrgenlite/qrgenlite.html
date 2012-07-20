@@ -1,4 +1,4 @@
-<html>
+<html manifest="qrgen.appcache">
 <!--
 Copyright (c) 2012 SeRepo
 
@@ -10,18 +10,30 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 -->
 <head>
 <title>QRGenLite</title>
+<meta name="description" content="QRGenLite is a lightweight version of QRGen."/>
+<meta name="keywords" content="serepo, repo, repository, random, open source, free, qrspace, html, google, google api, google chart, google chart tools, google infographics, infographics, google chart tools infographics, css, javascript, project, js, open, source, jscript, comics, qr, projects, flash projects, flash, weebly, javascript tests, webpage, website, site88, ios, ios web apps, web apps, webapps, site88, seblog, wordpress, blog, git, github, github repo, safari, mobile safari, appcache, cache, htmledit, html editor, lightweight, html snippet, html snippets, html tester" />
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
 <link rel="apple-touch-icon-precomposed" href="qrgenlite.jpg"/>
+<script type="text/javascript">
+function checkOnline(){
+if (navigator.onLine){
+document.getElementById('form').submit();
+}
+else {
+alert('You need an Internet connection to generate QR codes.');
+}
+}
+</script>
 </head>
 <body style="text-align:center; -webkit-text-size-adjust: none;">
 <h2>QRGen<sup>Lite</sup></h2>
-<form method="post" action="https://chart.googleapis.com/chart">
+<form method="post" action="https://chart.googleapis.com/chart" id="form">
 <input type="hidden" name="cht" value="qr"/>
 <input type="hidden" name="chs" value="150x150"/>
 <textarea name="chl" id="text" placeholder="Encode here."></textarea>
 <br/>
 <p>Error Correction (L, M, Q, H):<input type="text" size="1" name="chld" id="corr" value="L"/></p>
-<input type="submit" value="Generate QR Code"/><input type="button" value="Reset" onclick="document.getElementById('text').value = ''; document.getElementById('level').value = 1"/>
+<input type="button" value="Generate QR Code" onclick="checkOnline()"/><input type="button" value="Reset" onclick="document.getElementById('text').value = ''; document.getElementById('corr').value = 'L'"/>
 </form>
 </body>
 </html>

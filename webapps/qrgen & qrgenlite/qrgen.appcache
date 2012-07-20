@@ -1,9 +1,10 @@
 CACHE MANIFEST
 
-#version 1000000
+#version 100443535935
 
 CACHE:
 qrgen.html
+qrgenlite.html
 add2home-webapp.js
 add2home.css
 
