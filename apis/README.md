@@ -5,7 +5,7 @@ with ```yoururlhere``` as URL of the page which you want to view its source (whi
 To embed it, all you have to do is make an ```<iframe>``` (or ```<embed>```), set src to refer to a website via the API,
 set width and height to desired values then you're done!
 
-Live demo [here](http://test.serepo.site88.net/apis/sourceviewerdemo.html).
+There's a webapp version [here](http://test.serepo.site88.net/svgui.php).
 
 #### Bonus:
 You can use this to view any page source via a bookmarklet.
