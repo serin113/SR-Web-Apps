@@ -10,7 +10,7 @@ You can easily download all these files at [serin113.github.com/SR-Web-Apps](htt
 * htmledit - [http://www.javascriptsource.com/forms/html-preview.html](http://www.javascriptsource.com/forms/html-preview.html)
 * speckedit - [http://speckedit.com](http://speckedit.com) (their website is missing a download link so I hosted it in my repository)
 * html5clear - [https://github.com/yyx990803/HTML5-Clear](https://github.com/yyx990803/HTML5-Clear)
-* svgui - credits are in the API docs [http://test.serepo.site88.net/apis/apidocs.html#sourceviewer](here)
+* svgui - built on the original sourceviewer API  [http://test.serepo.site88.net/apis/apidocs.html#sourceviewer](here)
 * APIs - credits are in the folder
 
 ## License:
