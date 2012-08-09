@@ -11,7 +11,7 @@ You can easily download all these files at [serin113.github.com/SR-Web-Apps](htt
 * speckedit - [http://speckedit.com](http://speckedit.com) (their website is missing a download link so I hosted it in my repository)
 * html5clear - [https://github.com/yyx990803/HTML5-Clear](https://github.com/yyx990803/HTML5-Clear)
 * svgui - version of the [sourceviewer API](http://test.serepo.site88.net/apis/apidocs.html#sourceviewer) implemented in a easy-to-use **Graphical User Interface** (**GUI**)
-* APIs - credits are in the [apis](apis) folder
+* APIs - credits are in the [apis](https://github.com/serin113/SR-Web-Apps/tree/master/apis) folder
 
 ## License:
 
