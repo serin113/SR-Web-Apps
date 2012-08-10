@@ -5,7 +5,7 @@
 * qrgenlite - lightweight version of qrgen that uses the same mechanisms
 * htmledit - simple html code editor and previewer
 * html5clear - html5 implementation of the clear iphone app
-* svgui - simple website source code viewer that uses the sourceviewer API (more info [here](http://github.com/serin113/SR-Web-Apps/edit/master/apis/sv.php))
+* svgui - simple website source code viewer that uses the sourceviewer API (more info on the API [here](http://github.com/serin113/SR-Web-Apps/edit/master/apis))
 
 ## Credits:
 
