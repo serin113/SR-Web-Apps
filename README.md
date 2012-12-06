@@ -1,3 +1,12 @@
+## About:
+
+A collection of web apps (mine and from others).
+
+This repo hosts all files and sources for each web app.
+
+Currently, the web apps' codes are quite messy and non-standard compliant, so it would be great if you can send pull requests here (even if it's just a single word changed) to make this project better. :)
+
+
 ## Download:
 
 You can easily download all these files at [serin113.github.com/SR-Web-Apps](http://serin113.github.com/SR-Web-Apps/)
@@ -18,9 +27,6 @@ All other files and webapps in this repository either have a respective license 
 ## Notes:
 
 In my webapp's appcache files, you may notice that the version number is quite high.
-Its only purpose is to update the apps after a change. (More info on appcaches in [appcache.info](http://appcache.info))
-
-You may also notice that the webapp's codes are quite messy and non-standard compliant.
-I really don't have the time to fix those, so if you would like to contribute big in this project, you could fix (or at least shrink) those issues (either or both, it's up to you).
+Its only purpose is to update the apps after a change in one or more of the files. (More info on appcaches in [appcache.info](http://appcachefacts.info))
 
 If you notice something else going wrong, leave a message to me at "simon_clemente at me.com" (no quote marks and replace the "at" with "@").
