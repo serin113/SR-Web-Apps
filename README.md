@@ -7,17 +7,12 @@ And yes, those actually aren't APIs; they're just Javascript functions. I was ju
 
 All actual API credits go to the devs at Google Inc. The rest is copypasta ala edit.
 
-====
-====
+#####
+#####
 
 ## About:
 
-A collection of web apps (mine and from others).
-
-
-## Download:
-
-[serin113.github.com/SR-Web-Apps](http://serin113.github.com/SR-Web-Apps/)
+Probably my first attempts at anything tangentially related to programming.
 
 ## Credits:
 
@@ -28,10 +23,12 @@ A collection of web apps (mine and from others).
 
 ## License:
 
-Licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php) (the license is embedded in every HTML or PHP file in all of my webapps).
-All other files and webapps in this repository either have a respective license or do not have a license.
+"Licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php) (the license is embedded in every HTML or PHP file in all of my webapps).
+All other files and webapps in this repository either have a respective license or do not have a license."
+
+Or so I said before. Licenses are under whatever the licenses were for the sources and the APIs used. Definitely not MITL.
 
 ## Notes:
 
-In my webapp's appcache files, you may notice that the version number is quite high.
-Its only purpose is to update the apps after a change in one or more of the files. (More info on appcaches in [appcache.info](http://appcachefacts.info))
+In these webapps' appcache files, you may notice that the version number is quite high.
+Its only purpose is to update the apps after a change in one or more of the files. (More info on appcaches in [a now defunct webpage](https://web.archive.org/web/20140911203145/http://appcachefacts.info/))
