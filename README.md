@@ -7,9 +7,6 @@ And yes, those actually aren't APIs; they're just Javascript functions. I was ju
 
 All actual API credits go to the devs at Google Inc. The rest is copypasta ala edit.
 
-#####
-#####
-
 ## About:
 
 Probably my first attempts at anything tangentially related to programming.
